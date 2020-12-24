@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+body{
+    font-size: 16px;
+    line-height: 1.5;
+}
+.container{
+    width: 1000px;
+}
+h2{
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+h3{
+    padding-top: 15px;
+    font-weight: 700;
+    max-width: 900px;
+}
+.text{
+    padding: 20px 0;
+    color: #8c8c8c;
+}
+.box{
+    margin-bottom: 25px;
+    padding: 13px;
+    width: 150px;
+    height: 45px;
+    background-color: #2aabd2;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
