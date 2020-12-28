@@ -39,7 +39,9 @@ img{
     margin-top: 90px;
     color: #f7f7f7;
     background-color: #2aabd2;
-    max-width: 30%;
     padding: 15px;
     border: none;
+}
+.button:focus{
+    outline: none;
 }

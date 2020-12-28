@@ -17,6 +17,7 @@ body{
     background-color: #91e0e5;
 }
 .box{
+    margin-bottom: 15px;
     cursor: pointer;
     background-color: #fff;
     transition: .3s;

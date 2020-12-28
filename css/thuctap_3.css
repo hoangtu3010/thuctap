@@ -3,47 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+img{
+    max-width: 100%;
+    height: auto;
+}
 body{
     background-color: #f8f8f8;
     font-size: 16px;
     letter-spacing: 1px;
 }
-.borderbt{
-    width: 70px;
-    margin-left: 47%;
-    margin-bottom: 50px;
-    padding: 2px;
-    background-color: #82b4b4;
+.boderbt{
+    border-bottom: 3px solid #82b4b4;
+    width: 60px;
 }
 .menu{
-    margin-left: 20%;
-    color: 	#9f9f9f;
+    margin: 30px 0;
 }
-.menu-1{
-    cursor: pointer;
-    list-style: none;
-    margin: 15px;
-    float: left;
+.menu a{
+    color: #363636;
+    transition: .3s;
+    margin: 20px;
 }
-.menu-1:hover{
+.menu a:hover {
     color: #82b4b4;
+    text-decoration: none;
 }
 .content{
-    padding: 20px;
     background-color: #fff;
 }
-.box{
-    padding-top: 100px;
-    background-color: #9acc77;
-    height: 220px;
-    color: #fff;
-    margin-bottom: 30px;
-    cursor: pointer;
-    transition: .3s;
+.item{
+    padding: 20px;
 }
-.box:hover{
-    transform: scale(0.96);
-}
-.content-1 p{
-    font-size: 25px;
+.item img{
+    padding-bottom: 20px;
 }
