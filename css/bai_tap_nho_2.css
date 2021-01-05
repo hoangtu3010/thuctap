@@ -225,6 +225,7 @@ body{
     margin-bottom: 30px;
 }
 .text-6{
+    padding: 15px 0;
     color: #ff3946;
     font-weight: 700;
 }
@@ -334,6 +335,22 @@ body{
 .nav-2 a:hover{
     text-decoration: none;
 }
+.swiper-slide {
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
 .icon a{
     font-size: 30px;
     margin: 0 25px;
@@ -369,8 +386,6 @@ body{
         margin-right: 40px;
     }
 
-    element.style {
-    }
     .navbar-expand-lg .navbar-collapse {
         justify-content: center;
     }
