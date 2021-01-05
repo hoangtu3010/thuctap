@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Thực Tập</title>
-    <link rel="stylesheet" href="../lib/bootsrap 3.4.1/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../lib/fontawesome-free-5.15.1-web/css/all.css">
     <link rel="stylesheet" href="../css/bai_tap_nho_2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,24 +13,43 @@
 </head>
 <body>
     <div class="home">
-        <div class="logo"></div>
         <header class="header">
             <div class="container">
                 <div class="row">
-                    <div class="nav-1 col-md-8">
-                        <a href="#">Home.</a>
-                        <a href="#">About us.</a>
-                        <a href="#">Portfolio.</a>
-                        <a href="#">Blog.</a>
-                        <a href="#">Contact us.</a>
-                    </div>
-                    <div class="nav-2 col-md-4">
-                        <select class="language">
-                            <option value="language">EN</option>
-                            <option value="language">VN</option>
-                        </select>
-                        <button class="button" type="submit">Contact Us <i class="fas fa-arrow-right"></i></button>
-                    </div>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#"><div class="logo"></div></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav col-md-8">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Home.</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">About us.</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Portfolio.</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Blog.</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Contact us.</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="nav-3 col-md-4">
+                                <select class="language disabled nav-item" tabindex="-1" aria-disabled="true">
+                                    <option value="language">EN</option>
+                                    <option value="language">VN</option>
+                                </select>
+                                <button class="button" type="submit">Contact Us <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </header>
@@ -57,8 +77,8 @@
                     </div>
                     <div class="col-md-3">
                         <div class="item-2">
-                            <img style="height: 49px" class="icon" src="../image/Icon.png" alt="icon-1">
-                            <p class="text-4">Web & Graphic Design</p>
+                            <img width="49" class="icon" src="../image/Icon.png" alt="icon-1">
+                            <p class="text-4">Web & Graphicess Design</p>
                             <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan tincidunt</p>
                         </div>
                     </div>
@@ -84,7 +104,7 @@
                         <p class="text-3">Some Fine <br> Words About Us</p>
                         <p>Vestibulum ac diam sit amet quam vehicula elementum amet est on dui. Nulla porttitor accumsan tincidunt.Vestibulum ac diam sit amet</p>
                         <p>Quam vestibulum elementum amet est on dui.Nulla porttitor accumsan tincidunt.</p>
-                        <div class="back-next"><button type="button"><i class="back fas fa-arrow-left"></i></button> <button type="button"><i class="fas fa-arrow-right"></i></button></div>
+                        <div class="back-next"><button type="button"><i class="back fas fa-angle-left"></i></button> <button type="button"><i class="fas fa-chevron-right"></i></button></div>
                     </div>
                 </div>
             </div>
@@ -95,10 +115,9 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="item-5 col-md-12">
-                        <div class="item-5-1 col-md-6"><p class="text-3">See some of our Creative work.</p></div>
-                        <div class="item-5-2 col-md-6"><div class="back-next-2"><button type="button"><i class="back fas fa-arrow-left"></i></button> <button type="button"><i class="fas fa-arrow-right"></i></button></div></div>
-                    </div>
+                    <div class="item-5-1 col-md-6"><p class="text-3">See some of our Creative work.</p></div>
+                    <div class="item-5-2 col-md-6"><div class="back-next-2"><button type="button"><i class="back fas fa-angle-left"></i></button> <button type="button"><i class="fas fa-chevron-right"></i></button></div></div>
+
                     <div class="item-6 col-md-4">
                         <img src="https://i-dulich.vnecdn.net/2019/11/22/2-1574406624_680x0.jpg" alt="VN">
                     </div>
@@ -127,13 +146,11 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-6">
-                            <p class="text-5">blog stories</p>
-                            <p class="text-3">Check Our News</p>
-                        </div>
-                        <div class="item-5-2 col-md-6"><div class="back-next-2"><button type="button"><i class="back fas fa-arrow-left"></i></button> <button type="button"><i class="fas fa-arrow-right"></i></button></div></div>
+                    <div class="col-md-6">
+                        <p class="text-5">blog stories</p>
+                        <p class="text-3">Check Our News</p>
                     </div>
+                    <div class="item-5-2 col-md-6"><div class="back-next-2"><button type="button"><i class="back fas fa-angle-left"></i></button> <button type="button"><i class="fas fa-chevron-right"></i></button></div></div>
                     <div class=" col-md-4">
                         <div class="item-7">
                             <p style="font-weight: 700">New Adventure</p>
@@ -188,7 +205,7 @@
         <footer class="footer">
             <div class="container text-center">
                 <p>DOOB</p>
-                <p style="color: #ff3946; font-size: 40px; font-weight: 700; text-transform: uppercase">creativity above</p>
+                <p class="text-8">creativity above</p>
                 <div class="nav nav-2">
                     <a href="#">Home.</a>
                     <a href="#">About us.</a>

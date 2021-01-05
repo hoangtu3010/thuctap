@@ -15,23 +15,32 @@ body{
     color: rgb(49,69,132);
 }
 .header{
-    padding: 50px 0;
+    padding: 30px 0;
     position: relative;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
 }
 .logo{
     background-image: url("../image/Logo.png");
     width: 69px;
     height: 30px;
-    top: 55px;
-    left: 55px;
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
+}
+.bg-light{
+    background-color: transparent!important;
+}
+.container-fluid{
+    padding: 0;
+}
+.navbar-expand-lg .navbar-collapse{
+    justify-content: center;
+}
+.navbar-nav{
+    justify-content: flex-end;
+}
+.navbar-nav li{
+    margin-right: 15px;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: rgb(49,69,132);
+    font-weight: 700;
 }
 .nav-1{
     padding-top: 10px;
@@ -60,7 +69,6 @@ body{
     border-radius: 3px;
     font-weight: 700;
     transition: .3s;
-    margin-left: 20px;
 }
 .button i{
     margin-left: 10px;
@@ -120,19 +128,23 @@ body{
 .button-2:focus{
     outline: none;
 }
+
 .section-1-1 a{
     color: rgb(49,69,132);
     margin-left: 25px;
     transition: .2s;
+    text-decoration: none;
 }
 .section-1-1 a:hover{
-    text-decoration: none;
     color: #ff3946;
+}
+.section-2{
+    position: relative;
 }
 .image-3{
     position: absolute;
     left: 0;
-    top: 100%;
+    top: 80px;
     z-index: -1;
 }
 .section-2-1{
@@ -145,7 +157,7 @@ body{
     padding-bottom: 40px;
 }
 .item-2{
-    margin: 0 15px 15px 0;
+    margin: 0 0 15px 0;
     padding: 30px;
     background-color: #fff;
     border: none;
@@ -224,7 +236,7 @@ body{
 .item-5-2{
     display: flex;
     flex-direction: row-reverse;
-    padding-top: 30px   ;
+    padding-top: 50px;
 }
 .section-5{
     padding-top: 100px;
@@ -268,6 +280,7 @@ body{
     padding: 100px 0 20px 0;
 }
 .box{
+    margin-bottom: 15px;
     border: none;
     width: 100%;
     height: 50px;
@@ -302,10 +315,19 @@ body{
     color: #fff;
     padding: 50px 0;
 }
+.text-8{
+    color: #ff3946;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 .nav-2{
     padding: 10px 0;
+    display: flex;
+    justify-content: center;
 }
 .nav-2 a{
+    text-decoration: none;
     color: #fff;
     margin: 0 20px;
 }
@@ -327,4 +349,96 @@ body{
 .icon a:nth-of-type(3):hover{
     color: palevioletred;
 }
+@media (max-width: 1400px) {
+    .logo{
+        left: 20px;
+    }
+    .nav-2{
+        padding-left: 12px;
+    }
+}
+@media (max-width: 992px) {
+    .image-2{
+        background-image: none;
+    }
+    .navbar-light .navbar-toggler{
+        position: absolute;
+        right: 15px;
+    }
+    .nav-3{
+        margin-right: 40px;
+    }
+
+    element.style {
+    }
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: center;
+    }
+    .navbar-collapse {
+        width: 100%;
+        top: 100%;
+        position: absolute;
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 385px) {
+    .nav-3 button i{
+        display: none;
+    }
+    .button{
+        padding: 10px 15px;
+    }
+    .text-1{
+        font-size: 35px;
+    }
+    body{
+        text-align: center;
+    }
+    .text-2{
+        padding: 20px 0;
+    }
+    .section-2-1{
+        padding-top: 50px;
+    }
+    .section-3-1{
+        padding-top: 70px;
+    }
+    .section-6{
+        padding-top: 50px;
+    }
+    .text-3{
+        font-size: 25px;
+    }
+    .text-8{
+        font-size: 35px;
+    }
+    .footer{
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-1-1{
+        padding-top:40px;
+        padding-bottom: 0;
+    }
+    .section-4{
+        padding-top: 50px;
+    }
+    .item-4{
+        padding-left: 15px;
+    }
+    .text-3{
+        padding-bottom: 0;
+    }
+    .item-5-2{
+        padding: 0;
+    }
+    .nav-3{
+        margin-right: 70px;
+    }
+}
+
 
