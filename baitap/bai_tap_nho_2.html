@@ -14,13 +14,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="logo"></div>
     <div class="home">
         <header class="header">
             <div class="container">
                 <div class="row">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="#"><div class="logo"></div></a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -68,9 +68,7 @@
             </div>
         </section>
         <section class="section-2">
-            <div class="image-3">
-                <img src="../image/Bg.%20Shape2.png" alt="img">
-            </div>
+            <div class="image-3"></div>
             <div class="container">
                 <div class="section-2-1 row">
                     <div class="col-md-6">
@@ -96,11 +94,12 @@
         </section>
         <section class="section-3">
             <div class="image-4"></div>
+            <div class="image-7">
+                <img src="../image/Vector%20Illustration%202.png" alt="img" width="600" height="358">
+            </div>
             <div class="container">
                 <div class="section-3-1 row">
-                    <div class="item-3 col-md-6">
-                        <img src="../image/Vector%20Illustration%202.png" alt="img">
-                    </div>
+                    <div class="item-3 col-md-6"></div>
                     <div class="item-4 col-md-6">
                         <p class="text-5">our company</p>
                         <p class="text-3">Some Fine <br> Words About Us</p>
@@ -131,7 +130,11 @@
                             <div class="swiper-slide"><img src="https://media.cungcau.vn/files/headline/2020/10/08/31-547287-jisoo-lot-thom-giua-rung-may-anh-nhung-van-dep-bat-chap-thu-thach-den-flash.jpg" alt="VN"></div>
                             <div class="swiper-slide"><img src="https://media.cungcau.vn/files/headline/2020/10/08/31-547287-jisoo-lot-thom-giua-rung-may-anh-nhung-van-dep-bat-chap-thu-thach-den-flash.jpg" alt="VN"></div>
                         </div>
+                        <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                     <div class="text-6 text-center">See more of these</div>
                 </div>
@@ -191,7 +194,7 @@
                         <input class="box" type="text" placeholder="Subject">
                     </div>
                     <div class="item-8 col-md-12">
-                        <input class="box-2" type="text" placeholder="Message here...">
+                        <textarea rows="1" cols="20" class="box-2" placeholder="Message here..."></textarea>
                     </div>
                     <div class="button-3 col-md-12">
                         <button class="button-2" type="submit">Send Message</button>
@@ -222,12 +225,18 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper('.swiper-container',{
-            slidesPerView: 'auto',
-            centeredSlides: true,
+            slidesPerView: 3,
             spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             }
         });
     </script>

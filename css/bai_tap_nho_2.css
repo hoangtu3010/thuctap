@@ -19,6 +19,9 @@ body{
     position: relative;
 }
 .logo{
+    position: absolute;
+    top: 40px;
+    left: 50px;
     background-image: url("../image/Logo.png");
     width: 69px;
     height: 30px;
@@ -29,18 +32,15 @@ body{
 .container-fluid{
     padding: 0;
 }
-.navbar-expand-lg .navbar-collapse{
-    justify-content: center;
-}
-.navbar-nav{
-    justify-content: flex-end;
-}
 .navbar-nav li{
     margin-right: 15px;
 }
 .navbar-light .navbar-nav .nav-link{
     color: rgb(49,69,132);
     font-weight: 700;
+}
+.navbar{
+    padding: 0;
 }
 .nav-1{
     padding-top: 10px;
@@ -142,7 +142,12 @@ body{
     position: relative;
 }
 .image-3{
+    width: 220px;
+    height: 900px;
+    background-image: url("../image/Bg. Shape2.png");
     position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
     left: 0;
     top: 80px;
     z-index: -1;
@@ -178,6 +183,9 @@ body{
     right: 0;
     z-index: -1;
 }
+.section-3{
+    position: relative;
+}
 .section-3-1{
     padding-top: 150px;
 }
@@ -185,11 +193,14 @@ body{
     color: #ff3946;
     text-transform: uppercase;
 }
-.item-3{
-    padding-right: 40px;
+.image-7{
+    top: 160px;
+    left: 20px;
+    position: absolute;
+    z-index: -1;
 }
 .item-4{
-    padding-left: 40px;
+    max-width: 550px;
 }
 .back-next button{
     padding: 20px 0;
@@ -300,7 +311,6 @@ body{
 .box-2{
     border: none;
     width: 100%;
-    height: 50px;
     padding: 25px 0 100px 15px;
     background-color: rgb(244, 250, 254);
 }
@@ -366,6 +376,11 @@ body{
 .icon a:nth-of-type(3):hover{
     color: palevioletred;
 }
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+        max-width: 1140px;
+    }
+}
 @media (max-width: 1400px) {
     .logo{
         left: 20px;
@@ -374,16 +389,33 @@ body{
         padding-left: 12px;
     }
 }
+@media (max-width: 1300px) {
+    .navbar-collapse{
+        justify-content: space-around;
+    }
+}
+@media (max-width: 1199px) {
+    .item-3{
+        display: none;
+    }
+    .image-7{
+        display: none;
+    }
+}
 @media (max-width: 992px) {
     .image-2{
         background-image: none;
     }
     .navbar-light .navbar-toggler{
         position: absolute;
+        top: 4px;
         right: 15px;
     }
     .nav-3{
+        top: 1px;
+        position: absolute;
         margin-right: 40px;
+        right: 10px;
     }
 
     .navbar-expand-lg .navbar-collapse {
@@ -406,13 +438,17 @@ body{
         padding: 10px 15px;
     }
     .text-1{
-        font-size: 35px;
-    }
-    body{
         text-align: center;
+        font-size: 35px;
     }
     .text-2{
         padding: 20px 0;
+    }
+    .text-3{
+        text-align: center;
+    }
+    .text-5{
+        text-align: center;
     }
     .section-2-1{
         padding-top: 50px;
@@ -438,6 +474,9 @@ body{
     .section-1-1{
         padding-top:40px;
         padding-bottom: 0;
+    }
+    .section-3-1{
+        padding-top: 100px;
     }
     .section-4{
         padding-top: 50px;
