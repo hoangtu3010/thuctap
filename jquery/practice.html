@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <style>
+            body {
+                text-align: center;
+            }
+
+            #test2 {
+                padding: 50px;
+                background-color: darkcyan;
+                display: none;
+            }
+
+            #test4 {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                margin-top: 250px;
+                background-color: cornflowerblue;
+            }
+
+            .but {
+                padding: 0 400px 0 400px;
+            }
+
+            .but button {
+                margin: 15px 0 15px 0;
+            }
+
+            .text_color{
+                color:cyan;
+                text-decoration: none;
+            }
+        </style>
+
+        <script>
+            $(document).ready(function () {
+                // Ẩn hiện
+                $("#button").click(function () {
+                    $("#test").hide(600);
+                })
+
+                $("#button2").click(function () {
+                    $("#test").show(600);
+                })
+
+                $("#button3").click(function () {
+                    $("#test").toggle(600);
+                })
+
+                // Fade
+                $("#button4").click(function () {
+                    $("#test").fadeIn(500);
+                })
+
+                $("#button5").click(function () {
+                    $("#test").fadeOut(500);
+                })
+
+                $("#button6").click(function () {
+                    $("#test").fadeTo("slow", 0.4);
+                })
+
+                $("#button7").click(function () {
+                    $("#test").fadeToggle("slow");
+                })
+
+                // Slide
+                $("#button8").click(function () {
+                    $("#test2").slideDown("slow");
+                })
+
+                $("#button9").click(function () {
+                    $("#test2").slideUp("slow");
+                })
+
+                $("#button10").click(function () {
+                        $("#test2").slideToggle(5000);
+                    }
+                )
+
+                // Stop
+                $("#button12").click(function () {
+                    $("#test2").stop();
+                })
+
+                // Animate, Callback Function
+                $("#button11").click(function () {
+                    $("#test4").animate({ padding: '20px', left: '700px' }, function () {
+                        alert("Chào anh zaiiiii");
+                    })
+                })
+
+                // Chaining
+                $("#button13").click(function () {
+                    $("#test2").css("color", "yellow").slideDown(800).slideUp(800);
+                })
+
+                // Get
+                $("#button14").click(function () {
+                    alert("HTML: " + $("#test2").html());
+                })
+
+                // Set
+                $("#button15").click(function () {
+                    $("#test").html("<b>Xin Chào các bạn</b>");
+                })
+
+                $("#button16").click(function () {
+                    $("#test3").val("Green")
+                })
+
+                $("#button17").click(function () {
+                    $("#test1").attr("href", "https://zingnews.vn/")
+                })
+
+                $("#button18").click(function () {
+                    $("#test1").attr("href", function (i, vlu) {
+                        return vlu + "/feed/trending";
+                    })
+                })
+
+                $("#button19").click(function () {
+                    $("#test1").append("<span> world! </span>")
+                })
+
+                $("#button20").click(function () {
+                    $("#test1").prepend("<span> Hello </span>")
+                })
+
+                $("#button21").click(function () {
+                    $("#test").before("<b>Before</b>")
+                })
+
+                $("#button22").click(function () {
+                    $("#test").after("<i>After</i>")
+                })
+
+                $("#button23").click(function () {
+                    $("#test").remove();
+                })
+
+                $("#button24").click(function () {
+                    $("#test").empty()
+                })
+
+                $("#button25").click(function () {
+                    $("div").remove("#test")
+                })
+
+                $("#button26").click(function () {
+                    $("#test1").addClass("text_color");
+                })
+
+                $("#button27").click(function () {
+                    $("#test1").removeClass("text_color");
+                })
+
+                $("#button28").click(function () {
+                    $("#test1").toggleClass("text_color");
+                })
+
+                $("#button29").click(function(){
+                    var txt = "";
+                    txt += "Width: " + $("#test4").width() + "</br>";
+                    txt += "Height: " + $("#test4").height();
+                    $("#test4").html(txt);
+                });
+            })
+
+            function appendText() {
+                var txt1 = "<p>Text.</p>";
+                var txt2 = $("<p></p>").text("Text.");
+                var txt3 = document.createElement("p");
+                txt3.innerHTML = "Text.";
+                $("#test").append(txt1, txt2, txt3);
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="test">
+            <a id="test1" href="https://www.youtube.com/"> Hello World!</a>
+        </div>
+        <div id="test2">
+            <b>Hero</b>
+        </div>
+        <div id="test4"></div>
+        <div><input type="text" id="test3" value="Red"></div>
+        <div class="but">
+            <button id="button">Hide</button>
+            <button id="button2">Show</button>
+            <button id="button3">Toggle</button>
+            <button id="button4">Fade In</button>
+            <button id="button5">Fade Out</button>
+            <button id="button6">Fade To</button>
+            <button id="button8">Slide Down</button>
+            <button id="button9">Slide Up</button>
+            <button id="button10">Slide Toggle</button>
+            <button id="button11">Animate</button>
+            <button id="button12">Stop</button>
+            <button id="button13">Chainning</button>
+            <button id="button14">GetHTML</button>
+            <button id="button15">SetHTML</button>
+            <button id="button16">SetVal</button>
+            <button id="button17">SetAttr</button>
+            <button id="button18">CallAttr</button>
+            <button id="button19">Append</button>
+            <button id="button20">Prepand</button>
+            <button onclick="appendText()">ApPr</button>
+            <button id="button21">Before</button>
+            <button id="button22">After</button>
+            <button id="button23">Remove</button>
+            <button id="button24">Empty</button>
+            <button id="button25">Remove(choose)</button>
+            <button id="button26">Add Class</button>
+            <button id="button27">Remove Class</button>
+            <button id="button28">Toggle Class</button>
+            <button id="button29">Width height</button>
+        </div>
+
+    </body>
+
+</html>
