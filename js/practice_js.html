@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .test2 {
+            height: 150px;
+            overflow: hidden;
+            background-color: darkcyan;
+            margin: 20px 0 20px 0;
+        }
+
+        #test4 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            margin-top: 50px;
+            background-color: cornflowerblue;
+        }
+
+        .result{
+            float: right;
+            width: 50%;
+        }
+
+        .but {
+            float: left;
+            width: 50%;
+        }
+
+        .but button {
+            margin: 15px 0 15px 0;
+        }
+
+        .text-color{
+            color:cyan;
+            text-decoration: none;
+        }
+
+        #test3{
+            margin: 20px 0 20px 0;
+        }
+
+        .hide{
+            display: none;
+        }
+
+        .show{
+            display: block;
+        }
+
+        .fade-in{
+            opacity: 1;
+            transition-duration: 1s;
+        }
+
+        .fade-out{
+            opacity: 0;
+            transition-duration: 1s;
+        }
+
+        .slide-up{
+            height: 0;
+            transition-duration: 3s;
+        }
+
+        .slide-down{
+            height: 150px;
+            transition-duration: 3s;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="result">
+    <div class="show fade-in" id="test">
+        <a class="" id="test1" href="https://www.youtube.com/"> Hello World!</a>
+    </div>
+    <div class="test2 slide-up" id="test2">
+        <b>Hero</b>
+    </div>
+    <div id="test4">
+        Hello
+    </div>
+    <div>
+        <input type="text" id="test3" value="Red">
+    </div>
+</div>
+
+<div class="but">
+    <button id="button" onclick="hide()">Hide</button>
+    <button id="button2" onclick="show()">Show</button>
+    <button id="button3" onclick="toggle()">Toggle</button>
+    <button id="button4" onclick="fadeIn()">Fade In</button>
+    <button id="button5" onclick="fadeOut()">Fade Out</button>
+    <button id="button6" onclick="fadeTo()">Fade To</button>
+    <button id="button7" onclick="fadeToggle()">Fade Toggle</button>
+    <button id="button8" onclick="slideDown()">Slide Down</button>
+    <button id="button9" onclick="slideUp()">Slide Up</button>
+    <button id="button10" onclick="slideToggle()">Slide Toggle</button>
+    <button id="button12">Stop</button>
+    <button id="button11" onclick="animation()">Animate</button>
+    <button id="button13" onclick="chaining()">Chainning</button>
+    <button id="button14" onclick="getHTML()">GetHTML</button>
+    <button id="button30" onclick="getVal()">GetVal</button>
+    <button id="button15" onclick="setHTML()">SetHTML</button>
+    <button id="button16" onclick="setVal()">SetVal</button>
+    <button id="button17" onclick="setAttr()">SetAttr</button>
+    <button id="button19" onclick="append()">Append</button>
+    <button id="button20" onclick="prepend()">Prepand</button>
+    <button onclick="appendText()">ApPr</button>
+    <button id="button21" onclick="before()">Before</button>
+    <button id="button22" onclick="after()">After</button>
+    <button id="button23" onclick="remove()">Remove</button>
+    <button id="button24" onclick="empty()">Empty</button>
+    <button id="button26" onclick="addClass()">Add Class</button>
+    <button id="button27" onclick="removeClass()">Remove Class</button>
+    <button id="button28" onclick="toggleClass()">Toggle Class</button>
+    <button id="button29" onclick="size()">Width height</button>
+</div>
+
+</body>
+
+<script>
+    t = document.getElementById("test");
+    t1 = document.getElementById("test1");
+    t2 = document.getElementById("test2");
+    t3 = document.getElementById("test3");
+    t4 = document.getElementById("test4");
+
+    function hide(){
+        t.style.display = "none";
+    }
+
+    function show(){
+        t.style.display = "block";
+    }
+
+    function toggle(){
+        t.classList.toggle('show');
+        t.classList.toggle('hide');
+    }
+
+    function fadeIn(){
+         t.style.opacity = 1.0;
+         t.style.transitionDuration = "1s";
+    }
+
+    function fadeOut(){
+        t.style.opacity = 0;
+        t.style.transitionDuration = "1s";
+    }
+
+    function fadeTo(){
+        t.style.opacity = 0.5;
+        t.style.transitionDuration = "1s";
+    }
+
+    function fadeToggle(){
+        t.classList.toggle("fade-in");
+        t.classList.toggle("fade-out");
+    }
+
+    function slideDown(){
+        t2.style.height = "150px";
+        t2.style.transitionDuration = "1s"
+    }
+
+    function slideUp(){
+        t2.style.height = "0px";
+        t2.style.transitionDuration = "1s"
+    }
+
+    function slideToggle(){
+        t2.classList.toggle("slide-down");
+        t2.classList.toggle("slide-up");
+    }
+
+    function animation(){
+        let size = 100;
+        let mr = 0;
+        let text = 14;
+        let sz = setInterval(frame, 5)
+        function frame(){
+            if (size === 160){
+                clearInterval(sz);
+            }else{
+                size++;
+                mr++;
+                text++;
+                t4.style.width = size + "px";
+                t4.style.height = size + "px";
+                t4.style.marginLeft = mr + "px";
+                t4.style.fontSize = text + "px";
+
+            }
+        }
+
+    }
+
+    function chaining(){
+        t2.style.color = "yellow";
+        t2.getAttribute(slideToggle());
+        t2.style.backgroundColor = "gray"
+    }
+
+    function getHTML(){
+        let t = t2.innerHTML;
+        alert(t);
+    }
+
+    function getVal(){
+        let t = t3.value;
+        alert(t);
+    }
+
+    function setHTML(){
+        t.innerHTML = "<b>Xin Chào Các Bạn!</b>";
+    }
+
+    function setVal(){
+        t3.value = "Hoàng Tú";
+    }
+
+    function setAttr(){
+        t1.setAttribute("href", "https://zingnews.vn/")
+    }
+
+    function append(){
+        let text = document.createTextNode("World!")
+        let b = document.createElement("b")
+        b.appendChild(text);
+        t.appendChild(b);
+    }
+
+    function prepend(){
+        let text = document.createTextNode("Hello!")
+        let i = document.createElement("i")
+        i.appendChild(text);
+        t.insertBefore(i, t.childNodes[0]);
+    }
+
+    function before(){
+        t.insertAdjacentHTML("beforebegin", "<p> Hello </p>");
+    }
+
+    function after(){
+        t.insertAdjacentHTML("afterend", "<p> World! </p>");
+    }
+
+    function remove(){
+        t.parentNode.removeChild(t);
+    }
+
+    function empty(){
+        t.removeChild(t1);
+    }
+
+    function addClass(){
+        t1.classList.add("text-color")
+    }
+
+    function removeClass(){
+        t1.classList.remove("text-color")
+    }
+
+    function toggleClass(){
+        t1.classList.toggle("text-color");
+        t1.classList.toggle("");
+    }
+
+    function size(){
+        var data = "Size: <br>";
+        data += "Width: " + t4.clientWidth + "<br>";
+        data += "Heigh: " + t4.clientHeight;
+        t4.innerHTML = data;
+    }
+
+    function appendText() {
+        var txt1 = "<p>Text.</p>";
+        var txt2 = $("<p></p>").text("Text.");
+        var txt3 = document.createElement("p");
+        txt3.innerHTML = "Text.";
+        $("#test").append(txt1, txt2, txt3);
+    }
+
+    $(document).ready(function () {
+        // Stop
+        $("#button12").click(function () {
+            $("#test4").stop();
+        })
+
+    })
+
+</script>
+</html>
