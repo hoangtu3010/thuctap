@@ -75,6 +75,18 @@
             height: 150px;
             transition-duration: 3s;
         }
+
+        .test5{
+            margin-top: 150px;
+        }
+
+        .test5 * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
     </style>
 
 </head>
@@ -92,6 +104,23 @@
     </div>
     <div>
         <input type="text" id="test3" value="Red">
+    </div>
+    <div class="test5" id="test5">
+        <div style="width:500px;">div
+            <ul>ul
+                <li>li
+                    <p>p</p>
+                    <span>span</span>
+                    <h2>h2</h2>
+                </li>
+            </ul>
+        </div>
+
+        <div style="width:500px;">div
+            <p>p
+                <span>span</span>
+            </p>
+        </div>
     </div>
 </div>
 
@@ -124,7 +153,17 @@
     <button id="button26" onclick="addClass()">Add Class</button>
     <button id="button27" onclick="removeClass()">Remove Class</button>
     <button id="button28" onclick="toggleClass()">Toggle Class</button>
-    <button id="button29" onclick="size()">Width height</button>
+    <button id="button29">Width height</button>
+    <button id="button31">Parent</button>
+    <button id="button32">Parents</button>
+    <button id="button33">ParentsUntil</button>
+    <button id="button34">Children</button>
+    <button id="button35">Find</button>
+    <button id="button36">Siblings</button>
+    <button id="button37">Next</button>
+    <button id="button38">Next All</button>
+    <button id="button39">First</button>
+    <button id="button40">Last</button>
 </div>
 
 </body>
@@ -298,7 +337,50 @@
             $("#test4").stop();
         })
 
+        //Parent
+        $("#button31").click(function () {
+            $("span").parent().css({"color": "red", "border": "2px solid red"})
+        })
+
+        $("#button32").click(function () {
+            $("span").parents().css({"color": "red", "border": "2px solid red"})
+        })
+
+        $("#button33").click(function () {
+            $("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"})
+        })
+
+        $("#button34").click(function () {
+            $("ul").children().css({"color": "red", "border": "2px solid red"})
+        })
+
+        $("#button35").click(function () {
+            $("div").find("span").css({"color": "red", "border": "2px solid red"})
+        })
+
+        $("#button36").click(function () {
+            $("span").siblings().css({"color": "red", "border": "2px solid red"})
+        })
+
+        $("#button37").click(function () {
+            $("span").next().css({"color": "red", "border": "2px solid red"})
+        })
+
+        $("#button38").click(function () {
+            $("p").nextAll().css({"color": "red", "border": "2px solid red"})
+        })
+
+        $("#button39").click(function () {
+            $("p").first().css({"color": "red"})
+        })
+
+        $("#button40").click(function () {
+            $("p").last().css({"color": "red"})
+        })
+
+
     })
+
 
 </script>
 </html>
